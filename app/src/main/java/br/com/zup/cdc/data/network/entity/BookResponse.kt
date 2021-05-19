@@ -9,7 +9,7 @@ class BookResponse(
     val description: String,
     @field:SerializedName("coverImagePath") val imageUrl: String,
     val publicationDate: String,
-    val isbn: Int,
+    val isbn: String,
     @field:SerializedName("numberOfPages") val pages: Int,
     val author: AuthorResponse,
     val prices: List<PriceResponse>

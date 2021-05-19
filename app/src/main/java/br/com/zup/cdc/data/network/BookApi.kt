@@ -14,6 +14,6 @@ class BookApi @Inject constructor(retrofit: Retrofit) {
     private interface BookService {
 
         @GET("/api/book")
-        suspend fun getBooks(): List<BookResponse>
+        suspend fun getBooks(): ArrayList<BookResponse>
     }
 }
