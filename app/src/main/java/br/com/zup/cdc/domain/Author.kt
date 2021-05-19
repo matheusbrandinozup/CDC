@@ -4,12 +4,8 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class Book(
-    val title: String,
-    val subtitle: String,
-    val author: Author,
-    val imageUrl: String,
-    val prices: ArrayList<Price>,
+class Author(
+    val name: String,
+    val picture: String,
     val description: String
 ) : Parcelable
-

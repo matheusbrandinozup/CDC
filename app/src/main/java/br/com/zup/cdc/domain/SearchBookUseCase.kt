@@ -7,6 +7,7 @@ class SearchBookUseCase @Inject constructor(private val repository: BookReposito
 
     suspend fun search() : ArrayList<Book>{
         val books = repository.search()
-        return mapper.map(books)
+        val map = mapper.map(books)
+        return map
     }
 }

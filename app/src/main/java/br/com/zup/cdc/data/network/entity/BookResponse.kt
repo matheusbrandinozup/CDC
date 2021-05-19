@@ -15,7 +15,7 @@ class BookResponse(
     val prices: List<PriceResponse>
 )
 
-class PriceResponse(val value: Double, val type: BookType)
+class PriceResponse(val value: Double, @field:SerializedName("bookType") val type: BookType)
 
 enum class BookType {
     COMBO, EBOOK, HARDCOVER
