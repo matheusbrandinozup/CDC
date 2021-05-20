@@ -1,6 +1,8 @@
-package br.com.zup.cdc.domain
+package br.com.zup.cdc.domain.book
 
 import android.os.Parcelable
+import br.com.zup.cdc.domain.price.Price
+import br.com.zup.cdc.domain.author.Author
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

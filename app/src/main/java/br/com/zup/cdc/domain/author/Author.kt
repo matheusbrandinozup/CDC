@@ -1,4 +1,4 @@
-package br.com.zup.cdc.domain
+package br.com.zup.cdc.domain.author
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

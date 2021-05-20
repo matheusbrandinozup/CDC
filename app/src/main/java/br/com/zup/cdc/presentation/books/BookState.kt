@@ -1,6 +1,6 @@
 package br.com.zup.cdc.presentation.books
 
-import br.com.zup.cdc.domain.Book
+import br.com.zup.cdc.domain.book.Book
 
 sealed class BookState {
     object Loading : BookState()

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.zup.cdc.R
-import br.com.zup.cdc.domain.Book
+import br.com.zup.cdc.domain.book.Book
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 

@@ -1,7 +1,8 @@
-package br.com.zup.cdc.domain
+package br.com.zup.cdc.domain.book
 
 import br.com.zup.cdc.data.network.entity.BookResponse
-import java.math.BigDecimal
+import br.com.zup.cdc.domain.price.PriceMapper
+import br.com.zup.cdc.domain.author.AuthorMapper
 import javax.inject.Inject
 
 class BookMapper @Inject constructor(

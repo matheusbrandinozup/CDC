@@ -1,4 +1,4 @@
-package br.com.zup.cdc.domain
+package br.com.zup.cdc.domain.price
 
 import android.os.Parcelable
 import br.com.zup.cdc.data.network.entity.BookType

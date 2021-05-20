@@ -1,4 +1,4 @@
-package br.com.zup.cdc.domain
+package br.com.zup.cdc.domain.author
 
 import br.com.zup.cdc.data.network.entity.AuthorResponse
 import javax.inject.Inject

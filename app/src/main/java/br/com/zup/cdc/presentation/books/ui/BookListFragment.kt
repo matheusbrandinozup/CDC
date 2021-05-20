@@ -5,7 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.cdc.R
-import br.com.zup.cdc.domain.Book
+import br.com.zup.cdc.domain.book.Book
 
 class BookListFragment : Fragment(R.layout.fragment_book_list) {
 

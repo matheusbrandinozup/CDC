@@ -1,4 +1,4 @@
-package br.com.zup.cdc.domain
+package br.com.zup.cdc.domain.price
 
 import br.com.zup.cdc.data.network.entity.PriceResponse
 import java.math.BigDecimal
