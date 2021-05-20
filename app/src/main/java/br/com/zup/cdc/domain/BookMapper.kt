@@ -4,7 +4,10 @@ import br.com.zup.cdc.data.network.entity.BookResponse
 import java.math.BigDecimal
 import javax.inject.Inject
 
-class BookMapper @Inject constructor() {
+class BookMapper @Inject constructor(
+    private val authorMapper: AuthorMapper,
+    private val priceMapper: PriceMapper
+) {
 
     fun map(books: ArrayList<BookResponse>): ArrayList<Book> {
         return books.map { map(it) } as ArrayList<Book>
@@ -14,19 +17,10 @@ class BookMapper @Inject constructor() {
         return Book(
             title = dto.title,
             subtitle = dto.subtitle,
-            Author(
-                name = "${dto.author.firstName} ${dto.author.lastName}",
-                picture = dto.author.pictureUrl,
-                description = dto.author.bio
-            ),
+            author = authorMapper.map(dto.author),
             description = dto.description,
             imageUrl = dto.imageUrl,
-            prices = dto.prices.map {
-                Price(
-                    BigDecimal.valueOf(it.value),
-                    it.type
-                )
-            } as ArrayList<Price>
+            prices = priceMapper.map(dto.prices)
         )
     }
 }
