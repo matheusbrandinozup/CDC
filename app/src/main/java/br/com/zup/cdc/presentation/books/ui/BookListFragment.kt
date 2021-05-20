@@ -11,8 +11,11 @@ class BookListFragment : Fragment(R.layout.fragment_book_list) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val books : ArrayList<Book> = arguments?.get(BOOK_KEY) as ArrayList<Book>
-        view.findViewById<RecyclerView>(R.id.bookList).adapter = BookAdapter(books)
+        val books: ArrayList<Book> = arguments?.get(BOOK_KEY) as ArrayList<Book>
+        view.findViewById<RecyclerView>(R.id.bookList).adapter =
+            BookAdapter(books) { book ->
+                BookDetailsBottomSheet.create(book).show(parentFragmentManager, null)
+            }
     }
 
     companion object {
