@@ -16,8 +16,7 @@ import javax.inject.Inject
 class BookViewModel @Inject constructor(
     private val searchBookUseCase: SearchBookUseCase,
     private val contextProvider: CoroutineContextProvider
-) :
-    ViewModel() {
+) : ViewModel() {
 
     private val handler = CoroutineExceptionHandler { _, throwable ->
         _books.postValue(BookState.Failure(throwable))

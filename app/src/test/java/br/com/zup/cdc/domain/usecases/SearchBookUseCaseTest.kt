@@ -10,7 +10,7 @@ import br.com.zup.cdc.domain.book.BookMapper
 import br.com.zup.cdc.domain.price.PriceMapper
 import br.com.zup.cdc.util.TestCoroutineRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
