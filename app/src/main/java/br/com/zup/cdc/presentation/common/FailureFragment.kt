@@ -10,17 +10,17 @@ class FailureFragment : Fragment(R.layout.fragment_failure) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val error = arguments?.getString(FAILURE_KEY)
-        view.findViewById<TextView>(R.id.failureText).text = error
+        val error = arguments?.getSerializable(FAILURE_KEY) as Throwable
+        view.findViewById<TextView>(R.id.failureText).text = error.message
     }
 
     companion object {
         private const val FAILURE_KEY = "error_key"
 
-        fun open(error: String): FailureFragment {
+        fun open(error: Throwable): FailureFragment {
             return FailureFragment().apply {
                 arguments = Bundle().apply {
-                    putString(FAILURE_KEY, error)
+                    putSerializable(FAILURE_KEY, error)
                 }
             }
         }
